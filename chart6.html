@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据抓取</title>
+    <style type="text/css">
+        h1 {
+            font-size: 30px;
+            text-align: center;
+        }
+        #bottom{
+            left:10%;
+            position: fixed;
+            bottom: 0px;
+            border: solid 2px;
+            width: 80%;
+            height:250px;
+        }
+    </style>
+</head>
+<body>
+<h1>数据抓取</h1>
+<div id="bottom"></div>
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'http://echarts.baidu.com/build/dist'
+        }
+    });
+
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/theme/macarons',
+                'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('bottom'), 'macarons');
+                var option4 = {
+                    title: {
+                        text: '2016年B2C',
+                        x: 'center'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    calculable: true,
+                    xAxis: [
+                        {
+                            name:'监控产品',
+                            type: 'category',
+                            data: ['奶粉', '皮草', '香水', '奶粉', '食品'],
+                            axisLine: {
+                                show: false
+                            },
+                            axisTick: {
+                                show: false
+                            },
+                            splitLine: {
+                                show: false
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            name:'数量',
+                            type: 'value',
+                            splitNumber:2,
+                            max: 10,
+                            axisLabel: {
+                                formatter: '{value} W'
+                            },
+                            axisLine: {
+                                show: false
+                            }
+                        }
+
+                    ],
+                    grid: {
+                        x: '20%',
+                        y:'25%',
+                        width: '60%',
+//                        backgroundColor: '#969696',
+
+                    },
+                    series: [
+                        {
+                            name: '总货值',
+                            type: 'bar',
+                            barWidth:20,    // bar 的宽度
+                            data: [5.5, 8.0, 9.0, 7.0, 6.5]
+                        }
+                    ]
+                };
+                // 为echarts对象加载数据
+                myChart.setOption(option4, true);
+            }
+    );
+</script>
+</body>
+</html>

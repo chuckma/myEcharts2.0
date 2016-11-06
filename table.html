@@ -1,0 +1,54 @@
+<html> 
+    <head> 
+        <script src="jquery-1.2.js"></script> 
+        <script> 
+            $(document).ready(function () { 
+                for (var y = 1; y < 20; y++) { 
+                    $("#table_y").append("<tr style='height: 100px;'><td style='width: 90px;'>" + y.toString() + "</td></tr>"); 
+                    $("#table_xy").append("<tr y='" + y.toString() + "' style='height: 100px;'></tr>");; 
+                } 
+                for (var x = 1; x < 20; x++) { 
+                    $("#table_x tr").append("<td style='width: 100px;'>" + x.toString() + "</td>"); 
+                    $("#table_xy tr").each(function (index, element) { 
+                        var y = $(element).attr("y"); 
+                        $(element).append("<td style='width: 100px;'>" + x.toString() + "&nbsp;*&nbsp;" + y + "&nbsp;=&nbsp;" + (x * y).toString() + "</td>"); 
+                    }); 
+                } 
+                $("#divxy").scroll(function () { 
+                    $("#divx").get(0).scrollLeft = this.scrollLeft; 
+                    $("#divy").get(0).scrollTop = this.scrollTop; 
+                }); 
+            }); 
+        </script> 
+    </head> 
+    <body> 
+        <table> 
+            <tr> 
+                <td> 
+                </td> 
+                <td> 
+                    <div id="divx" style="width:400px; height:100px; overflow:hidden">    
+                        <table id="table_x" border="1" style="width: 2000px;"> 
+                            <tr style="height: 90px;"> 
+                            </tr> 
+                        </table> 
+                    </div> 
+                </td> 
+            </tr> 
+            <tr> 
+                <td> 
+                    <div id="divy" style="width:100px; height:400px; overflow:hidden">    
+                        <table id="table_y" border="1"> 
+                        </table> 
+                    </div> 
+                </td> 
+                <td> 
+                    <div id="divxy" style="width:400px; height:400px; overflow:scroll">    
+                        <table id="table_xy" border="1" style="width: 2000px;"> 
+                        </table> 
+                    </div> 
+                </td> 
+            </tr> 
+        </table> 
+    </body> 
+</html> 

@@ -8,36 +8,43 @@ html,body,div{
 #main{
     width:100%;
     height: 100%;
-    background-image: url(/img/globBg.png);
+    background-image: url(../image/globBg.png);
 }
 #left{
-    float:left; width:22%; height: 80%; background-color: aquamarine;
+    float:left;
+    width:22%;
+    height: 80%;
+    /*background-color: aquamarine;*/
 }
 #right{
-    float:right;width:22%;height:80%;  background-color: chartreuse;
+    float:right;
+    width:22%;
+    height:80%;
+    /*background-color: chartreuse;*/
 }
 #center{
-    height:80%; background-color: coral;
+    height:80%;
+    /*background-color: coral;*/
 }
 #left1,#left2,#left3,#right1,#right2,#right3{
     height: 33.33%;
 }
-#left1{
-    background-color: #FF66FF;
-}
-#left2{
-    background-color: #CCFF66;
-}
-#left3{
-    background-color: #FFFF66;
-}
-#right1{
-    background-color: #00CCCC;
-}
-#right2{
-    background-color: #6666CC;
-}
+/*#left1{*/
+    /*background-color: #FF66FF;*/
+/*}*/
+/*#left2{*/
+    /*background-color: #CCFF66;*/
+/*}*/
+/*#left3{*/
+    /*background-color: #FFFF66;*/
+/*}*/
+/*#right1{*/
+    /*background-color: #00CCCC;*/
+/*}*/
+/*#right2{*/
+    /*background-color: #6666CC;*/
+/*}*/
 
-#right3{
-    background-color: #9966CC;
-}
+/*#right3{*/
+    /*background-color: #9966CC;*/
+/*}*/

@@ -1,0 +1,5 @@
+﻿body{background:#6A5ACD;}
+#div1{height:60%;width:50%; position:relative; margin:10px auto;
+    border: solid 2px;}
+#div1 a{position:absolute;top:0px;left:0px;color:#fff;font-weight:bold;padding:3px 6px;}
+#div1 a:hover{border:1px solid #eee;background:#000;border-radius:5px;}
