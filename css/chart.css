@@ -1,33 +1,49 @@
+body{
+    margin:0;
+    padding:0;
+}
 html,body,div{
     height:100%
 }
-#main>div{
-    border: solid 0.5px;
-    border-color: orangered;
+div{
+    border: solid 0px;
+    border-color: #ff0000;
 }
 #main{
     width:100%;
     height: 100%;
     background-image: url(../image/globBg.png);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+    background-size:100% 100%;
+
 }
 #left{
     float:left;
     width:22%;
-    height: 80%;
+    height: 100%;
     /*background-color: aquamarine;*/
 }
 #right{
     float:right;
     width:22%;
-    height:80%;
+    height:100%;
     /*background-color: chartreuse;*/
 }
 #center{
-    height:80%;
-    /*background-color: coral;*/
+    height:100%;
+    color: #ffffff;
+    border:solid 2px;
+    border-color: #FF0000;
 }
 #left1,#left2,#left3,#right1,#right2,#right3{
     height: 33.33%;
+    border:solid 0.1px;
+    border-color: #eb6100;
+}
+#left1,#left2,#right1,#right2{
+    border-bottom: solid 0;
 }
 /*#left1{*/
     /*background-color: #FF66FF;*/

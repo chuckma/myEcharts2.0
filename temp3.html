@@ -2,9 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>三列布局</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*div {*/
+            /*border: solid 1px;*/
+            /*border-color: #FF0000;*/
+        /*}*/
+
+        .left {
+            width: 22%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #8CD0D3;
+        }
+
+        .middle {
+            border:solid 2px;
+            border-color: #000000;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            background: #2aa198;
+            position: relative;
+            margin: 0 22% 0 22%;
+        }
+
+        .right {
+            width: 22%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: #00ff00;
+        }
+        #left1_table{
+            font-size:12px;
+            border:solid 2px;
+            border-color: #eb6100;
+            border-collapse: separate;
+            border-spacing: 1px 1px;
+            vertical-align: bottom;
+        }
+        #left_d{
+            height: 20%;
+            border:solid 2px;
+            border-color: #FF5E99;
+        }
+    </style>
 </head>
 <body>
-
+<div class="left">
+    <div id="left_d">
+        <table id="left1_table">
+            <tr>
+                <td class="td1">出口退货信息</td>
+                <td class="data1">1256546</td>
+                <td class="td1">入境不合格信息</td>
+                <td class="data1">1256546</td>
+            </tr>
+            <tr>
+                <td class="td1">疫情疫病</td>
+                <td class="data1">1256546</td>
+                <td class="td1">出口预警</td>
+                <td class="data1">1256546</td>
+            </tr>
+            <tr>
+                <td class="td1">进口预警</td>
+                <td class="data1">1256546</td>
+                <td class="td1">通报召回</td>
+                <td class="data1">1256546</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="middle">
+</div>
+<div class="right"></div>
 </body>
 </html>

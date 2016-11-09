@@ -2,76 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>chart1</title>
+    <title>chart4</title>
     <link rel="stylesheet" href="css/chart.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="javascript/chart.js"></script>
-    <style type="text/css">
-        #right2{
-            background-image: url(image/hangzhouMap.png);
-            background-repeat:no-repeat;
-            /*background-attachment: fixed;*/
-            background-position: 100% 80%;
-            background-size: 85%;
-        }
-        #left1{
-            background-image: url(image/worldMap.png);
-            background-repeat:no-repeat;
-            /*background-attachment: fixed;*/
-            background-position: center;
-            background-size: 100%;
-        }
-        h2{
-            text-align: center;
-            color: #ffffff;
-        }
-        .btn_yq{
-            border: solid 1px;
-            border-color: red;
-
-        }
-        table{
-            margin: auto 0px ;
-            /*background-color: #9966CC;*/
-            width: 100%;
-            height: 10%;
-            position: relative;
-            bottom:0px;
-            /*text-align: center;*/
-        }
-        .td1{
-            color: #ffffff;
-            font-size: 10px;
-        }
-        .data1{
-            color: #ff0000;
-        }
-        #center{
-            border:solid 2px;
-            border-color: #000000;
-        }
-        #left_line,#right_line,#left_bar,#right_bar{
-            /*padding:20% 20%;*/
-            width: 45%;
-            height:35%;
-            float: left;
-        }
-    </style>
-<style type="text/css">
-.APP-dashi-botBanner {display:none!important;display:none}
-.post_adtop_main,.area.topad,[class*="top_ad"],.ga-1200_125,[id^="tadv_"],.channel_ad_2016 {display:none!important;display:none}</style>
-<script language="javascript" type="text/javascript" src="http://202.102.100.100/35ff706fd57d11c141cdefcd58d6562b.js" charset="gb2312"></script><script type="text/javascript">
-hQGHuMEAyLn('.ad960,.kaola-ad,.endAd550,.adRPicText,.ad360,iframe[src^="http://cpc.163.com/Bidding/servlet/BidAdsCode?"],iframe[src^="http://pro.163.com/html.ng/"],.btm-ad,.gg300,.content-ad,.gg,[class$="bottom_ad"],[class^="ad2"],.ggarea,.top-gg,#addiv,[class^="ad_"],.top-gg-area,[class^="gg2"],[class^="ad ad-"],.ad-main,[class^="ad-"],.tab-ad,.float-bar,.ad-sub,.ad-area,.head-main > .youdao,iframe[src^="http://g.163.com/"][src*="&affiliate="],iframe[src^="http://img1.126.net/"],iframe[src^="http://x.jd.com/"],img[src^="http://img1.126.net/"],iframe[src^="http://qzs.qq.com/qzone/"]');</script></head>
 <body>
-<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-<!--<div id="main" style="height:200px"></div>-->
-<!-- ECharts单文件引入 -->
 <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script src="javascript/dataCloud.js"></script>
 <script src="javascript/chart.js"></script>
     <div id="main" >
         <div id="left" >
             <div id="left1">
                 <h2>外系统风险数据</h2>
-                <table>
+                <table id="left1_table">
                     <tr>
                         <td class="td1">出口退货信息</td>
                         <td class="data1">1256546</td>
@@ -95,25 +39,229 @@ hQGHuMEAyLn('.ad960,.kaola-ad,.endAd550,.adRPicText,.ad360,iframe[src^="http://c
             <div id="left2">
 
             </div>
-            <div id="left3"></div>
+            <div id="left3">
+                <h2>数据抓取</h2>
+                <div id="div1">
+                    <!--<a href="#"target="_blank">差评</a>-->
+                    <!--<a href="#"target="_blank">假冒</a>-->
+                    <!--<a href="#"target="_blank">投诉</a>-->
+                    <!--<a href="#"target="_blank">太差了</a>-->
+                    <!--<a href="#"target="_blank">质量差</a>-->
+                    <!--<a href="#"target="_blank">TMD</a>-->
+                    <!--<a href="#"target="_blank">过期</a>-->
+                    <!--<a href="#"target="_blank">太好了</a>-->
+                    <!--<a href="#"target="_blank">太假了</a>-->
+                    <!--<a href="#"target="_blank">垃圾</a>-->
+                    <!--<a href="#"target="_blank">挺好的</a>-->
+                    <!--<a href="#"target="_blank">高仿</a>-->
+                    <!--<a href="#"target="_blank">很差劲</a>-->
+                    <!--<a href="#"target="_blank">服务差</a>-->
+                    <!--<a href="#"target="_blank">骗人的</a>-->
+                    <!--<a href="#"target="_blank">退货</a>-->
+                    <!--<a href="#"target="_blank">差评</a>-->
+                    <!--<a href="#"target="_blank">假冒</a>-->
+                    <!--<a href="#"target="_blank">投诉</a>-->
+                    <!--<a href="#"target="_blank">太差了</a>-->
+                    <!--<a href="#"target="_blank">质量差</a>-->
+                    <!--<a href="#"target="_blank">TMD</a>-->
+                    <!--<a href="#"target="_blank">过期</a>-->
+                    <!--<a href="#"target="_blank">太好了</a>-->
+                    <!--<a href="#"target="_blank">太假了</a>-->
+                    <!--<a href="#"target="_blank">垃圾</a>-->
+                    <!--<a href="#"target="_blank">挺好的</a>-->
+                    <!--<a href="#"target="_blank">高仿</a>-->
+                    <!--<a href="#"target="_blank">好用</a>-->
+                    <!--<a href="#"target="_blank">很差劲</a>-->
+                    <!--<a href="#"target="_blank">服务差</a>-->
+                    <!--<a href="#"target="_blank">退货</a>-->
+                </div>
+                <div id="left3_d">
+                    <table id="left3_table">
+                        <tr class="tr1_head">
+                            <td>网站</td>
+                            <td>品牌</td>
+                            <td>数量</td>
+                        </tr>
+                        <tr class="tr1">
+                            <td>京东</td>
+                            <td>奶粉</td>
+                            <td>100</td>
+                        </tr>
+                        <tr class="tr1">
+                            <td>京东</td>
+                            <td>奶粉</td>
+                            <td>100</td>
+                        </tr>
+                        <tr class="tr1">
+                            <td>京东</td>
+                            <td>奶粉</td>
+                            <td>100</td>
+                        </tr>
+                        <tr class="tr1">
+                            <td>京东</td>
+                            <td>奶粉</td>
+                            <td>100</td>
+                        </tr>
+                        <tr class="tr1">
+                            <td>京东</td>
+                            <td>奶粉</td>
+                            <td>100</td>
+                        </tr>
+                        <tr class="tr1">
+                            <td>京东</td>
+                            <td>奶粉</td>
+                            <td>100</td>
+                        </tr>
+                        <tr class="tr1">
+                            <td>京东</td>
+                            <td>奶粉</td>
+                            <td>100</td>
+                        </tr>
+                        <tr class="tr1">
+                            <td>京东</td>
+                            <td>奶粉</td>
+                            <td>100</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="line_d">
+
+                </div>
+            </div>
         </div>
 
         <div id="right" >
             <div id="right1">
                 <h2>贸易概况</h2>
-                <div id="left_line"></div>
-                <div id="right_line"></div>
-                <div id="left_bar"></div>
-                <div id="right_bar"></div>
+                <!--<div id="left_line"></div>-->
+                <!--<div id="right_line"></div>-->
+                <!--<div id="left_bar"></div>-->
+                <!--<div id="right_bar"></div>-->
             </div>
             <div id="right2">
                 <h2>风险处置</h2>
-
+                <table id="right2_table">
+                    <tr style="height: 10px;">
+                        <td style="background-color: #d59717;height: 5px;"></td>
+                        <td class="td2">江干园区</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #e7954b"></td>
+                        <td class="td2">拱墅园区</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #a4b0d4"></td>
+                        <td class="td2">余杭园区</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #9ec642"></td>
+                        <td class="td2">上城园区</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #aed08d"></td>
+                        <td class="td2">富阳园区</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #52110d"></td>
+                        <td class="td2">下城园区</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #f2b9d4"></td>
+                        <td class="td2">萧山园区</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #f3a37e"></td>
+                        <td class="td2">滨江园区</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #d2651d"></td>
+                        <td class="td2">西湖园区</td>
+                    </tr>
+                </table>
             </div>
             <div id="right3"></div>
         </div>
         <div id="center" >
-            的点点滴滴多多多多多多多
+            <table id="center_table">
+                <tr>
+                    <td>样品名称</td>
+                    <td>样品数量</td>
+                    <td>所属平台</td>
+                    <td>不合格原因</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
 
     </div>

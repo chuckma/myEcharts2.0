@@ -84,10 +84,10 @@
                 {
                     name: '备案数量',
                     type: 'value',
-                    max:20,
+                    max: 20,
                     boundaryGap: [0.2, 0.2],
-                    axisLabel:{
-                      formatter:'{value} W'
+                    axisLabel: {
+                        formatter: '{value} W'
                     },
                     axisTick: {
                         show: true,
@@ -109,7 +109,7 @@
                     type: 'line',
                     stack: '总量',
 
-                    data: [10, 8, 11, 12, 15, 12.5,8,7,7.5]
+                    data: [10, 8, 11, 12, 15, 12.5, 8, 7, 7.5]
                 }
             ]
         };
@@ -163,9 +163,9 @@
                 {
                     name: '备案数量',
                     type: 'value',
-                    max:20,
-                    axisLabel:{
-                        formatter:'{value} W'
+                    max: 20,
+                    axisLabel: {
+                        formatter: '{value} W'
                     },
                     axisTick: {
                         show: true,
@@ -186,7 +186,7 @@
                     name: '数量',
                     type: 'line',
                     stack: '总量',
-                    data: [10, 8, 11, 12, 15, 12.5,8,7,7.5]
+                    data: [10, 8, 11, 12, 15, 12.5, 8, 7, 7.5]
                 }
             ]
         };
@@ -235,11 +235,11 @@
             yAxis: [
                 {
                     type: 'value',
-                    max:20,
+                    max: 20,
 //                    splitNumber:3,
 
-                    axisLabel:{
-                      formatter:'{value} W'
+                    axisLabel: {
+                        formatter: '{value} W'
                     },
                     axisLine: {
                         show: false
@@ -301,7 +301,13 @@
         var option4 = {
             title: {
                 text: '2016年B2C',
-                x: 'center'
+                x: 'center',
+                y: 'bottom',
+                textAlign: 'center'
+//                textStyle:{
+//                    fontSize:12,
+//                    align:'center'
+//                }
             },
             tooltip: {
                 trigger: 'axis'
@@ -327,9 +333,9 @@
                 {
                     type: 'value',
 //                    splitNumber:3,
-                    max:20,
-                    axisLabel:{
-                        formatter:'{value} W'
+                    max: 20,
+                    axisLabel: {
+                        formatter: '{value} W'
                     },
                     axisLine: {
                         show: false
@@ -338,8 +344,9 @@
 
             ],
             grid: {
-                x: '20%',
-                width: '60%',
+                x: '38%',
+                width: '40%',
+                height: ' 20%',
                 backgroundColor: '#969696',
 
             },
@@ -348,35 +355,10 @@
                     name: '总货值',
                     type: 'bar',
 //                    itemStyle:barColor,
+                    barWidth: '10',
                     data: [5.0, 7.0, 9.0, 12.0, 14.6, 16.7, 18.6]
-                    /*markPoint : {
-                     data : [
-                     {type : 'max', name: '最大值'},
-                     {type : 'min', name: '最小值'}
-                     ]
-                     }*/
-                    /*    markLine : {
-                     data : [
-                     {type : 'average', name: '平均值'}
-                     ]
-                     }*/
-                }/*,
-                 {
-                 name:'降水量',
-                 type:'bar',
-                 data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
-                 markPoint : {
-                 data : [
-                 {name : '年最高', value : 182.2, xAxis: 7, yAxis: 183, symbolSize:18},
-                 {name : '年最低', value : 2.3, xAxis: 11, yAxis: 3}
-                 ]
-                 },
-                 markLine : {
-                 data : [
-                 {type : 'average', name : '平均值'}
-                 ]
-                 }
-                 }*/
+
+                }
             ]
         };
         // 为echarts对象加载数据
